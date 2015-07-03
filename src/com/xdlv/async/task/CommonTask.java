@@ -5,16 +5,19 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.os.AsyncTask;
 import android.os.Message;
 import android.util.Log;
 
 abstract class CommonTask<Params> extends AsyncTask<Params, Object, Message> {
 
+	static ScheduledExecutorService exec = Executors.newScheduledThreadPool(5);
+	
     static final String TAG = "TASK_ERROR";
     private Object handler;
     TaskListener listener;
@@ -54,6 +57,11 @@ abstract class CommonTask<Params> extends AsyncTask<Params, Object, Message> {
     public CommonTask<Params> executed(boolean executed){
         this.executed = executed;
         return this;
+    }
+    
+    public CommonTask<Params> execute(int delay, Params ...params){
+    	executeOnExecutor(exec, delay, params);
+    	return this;
     }
 
     protected Message obtainMessage(Object obj) {

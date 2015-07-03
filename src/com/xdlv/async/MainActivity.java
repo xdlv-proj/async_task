@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.xdlv.async.task.Proc;
+import com.xdlv.async.task.ProxyCommonTask;
 
 public class MainActivity extends Activity {
 	MainTask mainTask = new MainTask(this, this);
+	IMainTask task = (IMainTask)ProxyCommonTask.createTaskProxy(MainTaskProxy.class, this, this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +29,16 @@ public class MainActivity extends Activity {
 			}
 		});
 		
+		findViewById(R.id.textView1).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				task.test(5,R.id.textView1, "proxy");
+			}
+		});
+		
 	}
 	
-	@Proc({R.layout.activity_main, R.id.action_settings})
+	@Proc({R.layout.activity_main, R.id.action_settings, R.id.textView1})
 	void proc(Message msg){
 		Toast.makeText(this, msg.obj + "", Toast.LENGTH_LONG).show();
 	}
@@ -38,6 +47,7 @@ public class MainActivity extends Activity {
 	protected void onPause() {
 		super.onPause();
 		mainTask.cancle(R.layout.activity_main);
+		task.cancle(R.id.textView1);
 	}
 
 	@Override
