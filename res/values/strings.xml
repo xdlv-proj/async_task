@@ -4,5 +4,7 @@
     <string name="app_name">AsyncTask</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="_0_">后台执行（0秒）</string>
+    <string name="_5_">后台执行（5秒）</string>
 
 </resources>

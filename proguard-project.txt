@@ -18,3 +18,19 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class * extends java.lang.annotation.Annotation{*;}
+
+-keepclassmembers class com.xdlv.async.task.ProxyCommonTask{
+   public void cancle(int);
+}
+-keepclassmembers class * extends com.xdlv.async.task.ProxyCommonTask{
+   public <init>(android.app.Activity,java.lang.Object);
+}
+
+-keepclassmembers class * {
+   void proc*(android.os.Message);
+}
+
+
+

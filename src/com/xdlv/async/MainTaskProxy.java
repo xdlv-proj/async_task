@@ -10,16 +10,18 @@ import com.xdlv.async.task.ProxyCommonTask;
 public class MainTaskProxy extends ProxyCommonTask implements IMainTask{
 
 	AlertDialog alertDialog = null;
+	String TAG = "cc";
 	public MainTaskProxy(Activity context, Object handler) {
 		super(context,handler);
 	}
 	
 	public Message test(int delay,int code,String name){
+		Log.e(TAG, "invoke test");
 		return obtainMessage(code, name);
 	}
 	
 	protected void preExecute(int name) {
-		Log.e("cc", Thread.currentThread().getName());
+		Log.e(TAG, "invoke preExecute:" + Thread.currentThread().getName());
 		if (alertDialog == null){
 			alertDialog = new AlertDialog.Builder(context).setTitle("loading...").create();
 		}
@@ -27,7 +29,7 @@ public class MainTaskProxy extends ProxyCommonTask implements IMainTask{
 		
 	}
 	protected void postExecute(int name) {
-		Log.e("cc", Thread.currentThread().getName());
+		Log.e(TAG, "invoke postExecute:" + Thread.currentThread().getName());
 		alertDialog.dismiss();
 	}
 	protected boolean filter(int code) {

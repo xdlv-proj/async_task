@@ -19,7 +19,7 @@ public class CommonProcess {
 				while (true) {
 					synchronized (codeMap) {
 						try {
-							codeMap.wait(1000);
+							codeMap.wait(100);
 						} catch (InterruptedException e) {
 						}
 						size = codeMap.size();

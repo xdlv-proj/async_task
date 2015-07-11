@@ -11,43 +11,37 @@ import com.xdlv.async.task.Proc;
 import com.xdlv.async.task.ProxyCommonTask;
 
 public class MainActivity extends Activity {
-	MainTask mainTask = new MainTask(this, this);
 	IMainTask task = (IMainTask)ProxyCommonTask.createTaskProxy(MainTaskProxy.class, this, this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		mainTask.request("download", 5, R.layout.activity_main,"download");
-		mainTask.request("fast", 0, R.id.action_settings, "fast");
+		setContentView(R.layout.activity_layout);
 		
 		findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				mainTask.request("download", 5, R.layout.activity_main,"download");
+				task.test(0, R.id.button1, "¡¢º¥÷¥––");
 			}
 		});
 		
-		findViewById(R.id.textView1).setOnClickListener(new View.OnClickListener() {
+		findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				task.test(5,R.id.textView1, "proxy");
+				task.test(5, R.id.button2, "—”≥Ÿ5√Î÷¥––");
 			}
 		});
-		
 	}
 	
-	@Proc({R.layout.activity_main, R.id.action_settings, R.id.textView1})
-	void proc(Message msg){
+	@Proc({R.id.button1,R.id.button2})
+	void procMessage(Message msg){
 		Toast.makeText(this, msg.obj + "", Toast.LENGTH_LONG).show();
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		mainTask.cancle(R.layout.activity_main);
-		task.cancle(R.id.textView1);
+		task.cancle(R.id.button2);
 	}
 
 	@Override

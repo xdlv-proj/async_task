@@ -14,7 +14,7 @@ public class ProxyCommonTask implements InvocationHandler {
 	protected Activity context;
 	protected Object handler;
 
-	protected ProxyCommonTask(Activity context, Object handler) {
+	public ProxyCommonTask(Activity context, Object handler) {
 		this.context = context;
 		this.handler = handler;
 	}
@@ -25,7 +25,7 @@ public class ProxyCommonTask implements InvocationHandler {
 					.newInstance(context, handler);
 			return Proxy.newProxyInstance(taskClass.getClassLoader(), taskClass.getInterfaces(), h);
 		} catch (Exception e) {
-			throw new RuntimeException("cant load proxy", e);
+			throw new RuntimeException("cant load proxy:" + e, e);
 		}
 	}
 
@@ -53,7 +53,6 @@ public class ProxyCommonTask implements InvocationHandler {
 				protected Message execute2(Object... params) throws Exception {
 					return (Message) method.invoke(ProxyCommonTask.this, params);
 				}
-				
 				protected void onPostExecute(Message result) {
 					super.onPostExecute(result);
 					synchronized (codeMap) {
