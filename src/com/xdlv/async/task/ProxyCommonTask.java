@@ -18,12 +18,13 @@ public class ProxyCommonTask implements InvocationHandler {
 		this.context = context;
 		this.handler = handler;
 	}
-
-	public static Object createTaskProxy(Class<?> taskClass, Activity context, Object handler) {
+	
+	@SuppressWarnings("unchecked")
+	public static <T> T createTaskProxy(Class<?> taskClass, Class<? extends ITaskProxy> i ,Activity context, Object handler) {
 		try {
 			InvocationHandler h = (InvocationHandler) taskClass.getConstructor(Activity.class, Object.class)
 					.newInstance(context, handler);
-			return Proxy.newProxyInstance(taskClass.getClassLoader(), taskClass.getInterfaces(), h);
+			return (T)Proxy.newProxyInstance(taskClass.getClassLoader(),new Class<?>[]{i}, h);
 		} catch (Exception e) {
 			throw new RuntimeException("cant load proxy:" + e, e);
 		}
@@ -37,6 +38,12 @@ public class ProxyCommonTask implements InvocationHandler {
 			return null;
 		}
 		final int code = (Integer)args[1];
+		//当前还没有运行结束
+		synchronized (codeMap) {
+			if (codeMap.get(code) != null){
+				return null;
+			}
+		}
 		if (method.getReturnType().equals(Message.class)) {
 			CommonTask<Object> task = new CommonTask<Object>(handler, code) {
 				protected void onPreExecute() {
@@ -51,7 +58,12 @@ public class ProxyCommonTask implements InvocationHandler {
 				}
 				@Override
 				protected Message execute2(Object... params) throws Exception {
-					return (Message) method.invoke(ProxyCommonTask.this, params);
+					Method implMethod = ProxyCommonTask.this.getClass().getMethod(
+							method.getName(), method.getParameterTypes());
+					if (implMethod == null){
+						throw new Exception("can not find target:" + method.getName());
+					}
+					return (Message) implMethod.invoke(ProxyCommonTask.this, params);
 				}
 				protected void onPostExecute(Message result) {
 					super.onPostExecute(result);

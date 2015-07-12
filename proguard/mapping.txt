@@ -1410,7 +1410,7 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.a
     int clampViewPositionHorizontal(android.view.View,int,int) -> a
     int clampViewPositionVertical(android.view.View,int,int) -> b
 com.xdlv.async.IMainTask -> com.xdlv.async.a:
-    android.os.Message test(int,int,java.lang.String) -> a
+    android.os.Message test(int,int,java.lang.String) -> test
 com.xdlv.async.MainActivity -> com.xdlv.async.MainActivity:
     com.xdlv.async.IMainTask task -> a
     void onCreate(android.os.Bundle) -> onCreate
@@ -1424,12 +1424,12 @@ com.xdlv.async.MainActivity$2 -> com.xdlv.async.c:
     com.xdlv.async.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.xdlv.async.MainTaskProxy -> com.xdlv.async.d:
-    android.app.AlertDialog alertDialog -> a
-    java.lang.String TAG -> b
-    android.os.Message test(int,int,java.lang.String) -> a
-    void preExecute(int) -> a
-    void postExecute(int) -> b
-    boolean filter(int) -> c
+    android.app.AlertDialog alertDialog -> alertDialog
+    java.lang.String TAG -> TAG
+    android.os.Message test(int,int,java.lang.String) -> test
+    void preExecute(int) -> preExecute
+    void postExecute(int) -> postExecute
+    boolean filter(int) -> filter
 com.xdlv.async.task.AsyncTask -> com.xdlv.async.task.a:
     int CPU_COUNT -> c
     int CORE_POOL_SIZE -> d
@@ -1526,16 +1526,16 @@ com.xdlv.async.task.Proc -> com.xdlv.async.task.Proc:
 com.xdlv.async.task.Prog -> com.xdlv.async.task.Prog:
     int[] value() -> value
 com.xdlv.async.task.ProxyCommonTask -> com.xdlv.async.task.m:
-    android.util.SparseArray codeMap -> c
-    android.app.Activity context -> d
-    java.lang.Object handler -> e
-    java.lang.Object createTaskProxy(java.lang.Class,android.app.Activity,java.lang.Object) -> a
+    android.util.SparseArray codeMap -> codeMap
+    android.app.Activity context -> context
+    java.lang.Object handler -> handler
+    java.lang.Object createTaskProxy(java.lang.Class,java.lang.Class,android.app.Activity,java.lang.Object) -> createTaskProxy
     java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
     void cancle(int) -> cancle
-    android.os.Message obtainMessage(int,java.lang.Object) -> a
-    boolean filter(int) -> c
-    void preExecute(int) -> a
-    void postExecute(int) -> b
+    android.os.Message obtainMessage(int,java.lang.Object) -> obtainMessage
+    boolean filter(int) -> filter
+    void preExecute(int) -> preExecute
+    void postExecute(int) -> postExecute
 com.xdlv.async.task.ProxyCommonTask$1 -> com.xdlv.async.task.n:
     com.xdlv.async.task.ProxyCommonTask this$0 -> g
     java.lang.reflect.Method val$method -> h
@@ -1549,3 +1549,5 @@ com.xdlv.async.task.ProxyCommonTask$1$1 -> com.xdlv.async.task.o:
 com.xdlv.async.task.ProxyCommonTask$1$2 -> com.xdlv.async.task.p:
     com.xdlv.async.task.ProxyCommonTask$1 this$1 -> a
     void run() -> run
+com.xdlv.async.task.Tar -> com.xdlv.async.task.Tar:
+    java.lang.String[] value() -> value

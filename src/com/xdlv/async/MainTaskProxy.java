@@ -7,7 +7,7 @@ import android.util.Log;
 
 import com.xdlv.async.task.ProxyCommonTask;
 
-public class MainTaskProxy extends ProxyCommonTask implements IMainTask{
+public class MainTaskProxy extends ProxyCommonTask{
 
 	AlertDialog alertDialog = null;
 	String TAG = "cc";
@@ -15,7 +15,7 @@ public class MainTaskProxy extends ProxyCommonTask implements IMainTask{
 		super(context,handler);
 	}
 	
-	public Message test(int delay,int code,String name){
+	public Message test(int delay,int code,String name)throws Exception{
 		Log.e(TAG, "invoke test");
 		return obtainMessage(code, name);
 	}

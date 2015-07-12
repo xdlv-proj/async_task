@@ -11,7 +11,7 @@ import com.xdlv.async.task.Proc;
 import com.xdlv.async.task.ProxyCommonTask;
 
 public class MainActivity extends Activity {
-	IMainTask task = (IMainTask)ProxyCommonTask.createTaskProxy(MainTaskProxy.class, this, this);
+	IMainTask task = ProxyCommonTask.createTaskProxy(MainTaskProxy.class,IMainTask.class ,this, this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -62,10 +62,17 @@ android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.grap
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
 android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+com.xdlv.async.IMainTask: android.os.Message test(int,int,java.lang.String)
 com.xdlv.async.MainActivity
 com.xdlv.async.MainActivity: MainActivity()
 com.xdlv.async.MainActivity: void procMessage(android.os.Message)
+com.xdlv.async.MainTaskProxy: android.app.AlertDialog alertDialog
+com.xdlv.async.MainTaskProxy: java.lang.String TAG
 com.xdlv.async.MainTaskProxy: MainTaskProxy(android.app.Activity,java.lang.Object)
+com.xdlv.async.MainTaskProxy: android.os.Message test(int,int,java.lang.String)
+com.xdlv.async.MainTaskProxy: void preExecute(int)
+com.xdlv.async.MainTaskProxy: void postExecute(int)
+com.xdlv.async.MainTaskProxy: boolean filter(int)
 com.xdlv.async.R$dimen: int activity_horizontal_margin
 com.xdlv.async.R$dimen: int activity_vertical_margin
 com.xdlv.async.R$drawable: int ic_launcher
@@ -83,6 +90,7 @@ com.xdlv.async.R$style: int AppBaseTheme
 com.xdlv.async.R$style: int AppTheme
 com.xdlv.async.task.AsyncTask$Status: com.xdlv.async.task.AsyncTask$Status[] values()
 com.xdlv.async.task.AsyncTask$Status: com.xdlv.async.task.AsyncTask$Status valueOf(java.lang.String)
+com.xdlv.async.task.ITaskProxy: void cancle(int)
 com.xdlv.async.task.Post
 com.xdlv.async.task.Post: int[] value()
 com.xdlv.async.task.Pre
@@ -91,5 +99,17 @@ com.xdlv.async.task.Proc
 com.xdlv.async.task.Proc: int[] value()
 com.xdlv.async.task.Prog
 com.xdlv.async.task.Prog: int[] value()
+com.xdlv.async.task.ProxyCommonTask: android.util.SparseArray codeMap
+com.xdlv.async.task.ProxyCommonTask: android.app.Activity context
+com.xdlv.async.task.ProxyCommonTask: java.lang.Object handler
+com.xdlv.async.task.ProxyCommonTask: void <clinit>()
 com.xdlv.async.task.ProxyCommonTask: ProxyCommonTask(android.app.Activity,java.lang.Object)
+com.xdlv.async.task.ProxyCommonTask: java.lang.Object createTaskProxy(java.lang.Class,java.lang.Class,android.app.Activity,java.lang.Object)
+com.xdlv.async.task.ProxyCommonTask: java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
 com.xdlv.async.task.ProxyCommonTask: void cancle(int)
+com.xdlv.async.task.ProxyCommonTask: android.os.Message obtainMessage(int,java.lang.Object)
+com.xdlv.async.task.ProxyCommonTask: boolean filter(int)
+com.xdlv.async.task.ProxyCommonTask: void preExecute(int)
+com.xdlv.async.task.ProxyCommonTask: void postExecute(int)
+com.xdlv.async.task.Tar
+com.xdlv.async.task.Tar: java.lang.String[] value()

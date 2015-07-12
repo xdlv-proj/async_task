@@ -1,8 +1,8 @@
 package com.xdlv.async;
 
-import com.xdlv.async.task.ITaskProxy;
-
 import android.os.Message;
+
+import com.xdlv.async.task.ITaskProxy;
 
 public interface IMainTask extends ITaskProxy{
 

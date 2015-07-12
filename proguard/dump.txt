@@ -55437,17 +55437,17 @@ Constant Pool (count = 9):
   + Class [com/xdlv/async/task/l]
   + Class [java/lang/Object]
   + Utf8 [(IILjava/lang/String;)Landroid/os/Message;]
-  + Utf8 [a]
   + Utf8 [com/xdlv/async/a]
   + Utf8 [com/xdlv/async/task/l]
   + Utf8 [java/lang/Object]
+  + Utf8 [test]
 
 Fields (count = 0):
 
 Methods (count = 1):
-  + Method:       a(IILjava/lang/String;)Landroid/os/Message;
+  + Method:       test(IILjava/lang/String;)Landroid/os/Message;
     Access flags: 0x401
-      = public abstract android.os.Message a(int,int,java.lang.String)
+      = public abstract android.os.Message test(int,int,java.lang.String)
 
 Class file attributes (count = 0):
 
@@ -55461,7 +55461,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 102):
+Constant Pool (count = 103):
   + Integer [2130903040]
   + Integer [2131165184]
   + Integer [2131230720]
@@ -55492,17 +55492,17 @@ Constant Pool (count = 102):
   + Methodref [com/xdlv/async/MainActivity.setContentView (I)V]
   + Methodref [com/xdlv/async/b.<init> (Lcom/xdlv/async/MainActivity;)V]
   + Methodref [com/xdlv/async/c.<init> (Lcom/xdlv/async/MainActivity;)V]
-  + Methodref [com/xdlv/async/task/m.a (Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
+  + Methodref [com/xdlv/async/task/m.createTaskProxy (Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
   + Methodref [java/lang/StringBuilder.<init> ()V]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
   + InterfaceMethodref [com/xdlv/async/a.cancle (I)V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Lcom/xdlv/async/MainActivity;)V]
-  + NameAndType [a (Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
   + NameAndType [a Lcom/xdlv/async/a;]
   + NameAndType [append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + NameAndType [cancle (I)V]
+  + NameAndType [createTaskProxy (Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
   + NameAndType [findViewById (I)Landroid/view/View;]
   + NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
   + NameAndType [inflate (ILandroid/view/Menu;)V]
@@ -55526,7 +55526,7 @@ Constant Pool (count = 102):
   + Utf8 [(Landroid/view/Menu;)Z]
   + Utf8 [(Landroid/view/View$OnClickListener;)V]
   + Utf8 [(Lcom/xdlv/async/MainActivity;)V]
-  + Utf8 [(Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -55548,6 +55548,7 @@ Constant Pool (count = 102):
   + Utf8 [com/xdlv/async/c]
   + Utf8 [com/xdlv/async/d]
   + Utf8 [com/xdlv/async/task/m]
+  + Utf8 [createTaskProxy]
   + Utf8 [findViewById]
   + Utf8 [getMenuInflater]
   + Utf8 [inflate]
@@ -55574,22 +55575,24 @@ Methods (count = 5):
     Access flags: 0x1
       = public MainActivity()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 19, locals = 1, stack = 4):
+    + Code attribute instructions (code length = 21, locals = 1, stack = 5):
       [0] aload_0 v0
       [1] invokespecial #19
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
       [5] ldc #14
         + Class [com/xdlv/async/d]
-      [7] aload_0 v0
-      [8] aload_0 v0
-      [9] invokestatic #31
-        + Methodref [com/xdlv/async/task/m.a (Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
-      [12] checkcast #11
+      [7] ldc #11
         + Class [com/xdlv/async/a]
-      [15] putfield #18
+      [9] aload_0 v0
+      [10] aload_0 v0
+      [11] invokestatic #31
+        + Methodref [com/xdlv/async/task/m.createTaskProxy (Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
+      [14] checkcast #11
+        + Class [com/xdlv/async/a]
+      [17] putfield #18
         + Fieldref [com/xdlv/async/MainActivity.a Lcom/xdlv/async/a;]
-      [18] return
+      [20] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreate(Landroid/os/Bundle;)V
@@ -55717,7 +55720,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/view/View$OnClickListener]
 
-Constant Pool (count = 32):
+Constant Pool (count = 33):
   + Integer [2131230720]
   + String [¡¢º¥÷¥––]
   + Class [android/view/View$OnClickListener]
@@ -55728,11 +55731,11 @@ Constant Pool (count = 32):
   + Fieldref [com/xdlv/async/MainActivity.a Lcom/xdlv/async/a;]
   + Fieldref [com/xdlv/async/b.a Lcom/xdlv/async/MainActivity;]
   + Methodref [java/lang/Object.<init> ()V]
-  + InterfaceMethodref [com/xdlv/async/a.a (IILjava/lang/String;)Landroid/os/Message;]
+  + InterfaceMethodref [com/xdlv/async/a.test (IILjava/lang/String;)Landroid/os/Message;]
   + NameAndType [<init> ()V]
-  + NameAndType [a (IILjava/lang/String;)Landroid/os/Message;]
   + NameAndType [a Lcom/xdlv/async/MainActivity;]
   + NameAndType [a Lcom/xdlv/async/a;]
+  + NameAndType [test (IILjava/lang/String;)Landroid/os/Message;]
   + Utf8 [()V]
   + Utf8 [(IILjava/lang/String;)Landroid/os/Message;]
   + Utf8 [(Landroid/view/View;)V]
@@ -55748,6 +55751,7 @@ Constant Pool (count = 32):
   + Utf8 [com/xdlv/async/b]
   + Utf8 [java/lang/Object]
   + Utf8 [onClick]
+  + Utf8 [test]
   + Utf8 [¡¢º¥÷¥––]
 
 Fields (count = 1):
@@ -55787,7 +55791,7 @@ Methods (count = 2):
       [10] ldc #2
         + String [¡¢º¥÷¥––]
       [12] invokeinterface #11
-        + InterfaceMethodref [com/xdlv/async/a.a (IILjava/lang/String;)Landroid/os/Message;]
+        + InterfaceMethodref [com/xdlv/async/a.test (IILjava/lang/String;)Landroid/os/Message;]
       [17] pop
       [18] return
       Code attribute exceptions (count = 0):
@@ -55806,7 +55810,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/view/View$OnClickListener]
 
-Constant Pool (count = 32):
+Constant Pool (count = 33):
   + Integer [2131230721]
   + String [—”≥Ÿ5√Î÷¥––]
   + Class [android/view/View$OnClickListener]
@@ -55817,11 +55821,11 @@ Constant Pool (count = 32):
   + Fieldref [com/xdlv/async/MainActivity.a Lcom/xdlv/async/a;]
   + Fieldref [com/xdlv/async/c.a Lcom/xdlv/async/MainActivity;]
   + Methodref [java/lang/Object.<init> ()V]
-  + InterfaceMethodref [com/xdlv/async/a.a (IILjava/lang/String;)Landroid/os/Message;]
+  + InterfaceMethodref [com/xdlv/async/a.test (IILjava/lang/String;)Landroid/os/Message;]
   + NameAndType [<init> ()V]
-  + NameAndType [a (IILjava/lang/String;)Landroid/os/Message;]
   + NameAndType [a Lcom/xdlv/async/MainActivity;]
   + NameAndType [a Lcom/xdlv/async/a;]
+  + NameAndType [test (IILjava/lang/String;)Landroid/os/Message;]
   + Utf8 [()V]
   + Utf8 [(IILjava/lang/String;)Landroid/os/Message;]
   + Utf8 [(Landroid/view/View;)V]
@@ -55837,6 +55841,7 @@ Constant Pool (count = 32):
   + Utf8 [com/xdlv/async/c]
   + Utf8 [java/lang/Object]
   + Utf8 [onClick]
+  + Utf8 [test]
   + Utf8 [—”≥Ÿ5√Î÷¥––]
 
 Fields (count = 1):
@@ -55876,7 +55881,7 @@ Methods (count = 2):
       [10] ldc #2
         + String [—”≥Ÿ5√Î÷¥––]
       [12] invokeinterface #11
-        + InterfaceMethodref [com/xdlv/async/a.a (IILjava/lang/String;)Landroid/os/Message;]
+        + InterfaceMethodref [com/xdlv/async/a.test (IILjava/lang/String;)Landroid/os/Message;]
       [17] pop
       [18] return
       Code attribute exceptions (count = 0):
@@ -55892,10 +55897,9 @@ _____________________________________________________________________
   Access flags:  0x21
     = public class com.xdlv.async.d extends com.xdlv.async.task.m
 
-Interfaces (count = 1):
-  + Class [com/xdlv/async/a]
+Interfaces (count = 0):
 
-Constant Pool (count = 92):
+Constant Pool (count = 94):
   + String [cc]
   + String [invoke postExecute:]
   + String [invoke preExecute:]
@@ -55904,21 +55908,20 @@ Constant Pool (count = 92):
   + Class [android/app/AlertDialog]
   + Class [android/app/AlertDialog$Builder]
   + Class [android/util/Log]
-  + Class [com/xdlv/async/a]
   + Class [com/xdlv/async/d]
   + Class [com/xdlv/async/task/m]
   + Class [java/lang/StringBuilder]
   + Class [java/lang/Thread]
-  + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
-  + Fieldref [com/xdlv/async/d.b Ljava/lang/String;]
-  + Fieldref [com/xdlv/async/d.d Landroid/app/Activity;]
+  + Fieldref [com/xdlv/async/d.TAG Ljava/lang/String;]
+  + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
+  + Fieldref [com/xdlv/async/d.context Landroid/app/Activity;]
   + Methodref [android/app/AlertDialog.dismiss ()V]
   + Methodref [android/app/AlertDialog.show ()V]
   + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
   + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
   + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
-  + Methodref [com/xdlv/async/d.a (ILjava/lang/Object;)Landroid/os/Message;]
+  + Methodref [com/xdlv/async/d.obtainMessage (ILjava/lang/Object;)Landroid/os/Message;]
   + Methodref [com/xdlv/async/task/m.<init> (Landroid/app/Activity;Ljava/lang/Object;)V]
   + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -55928,16 +55931,16 @@ Constant Pool (count = 92):
   + NameAndType [<init> (Landroid/app/Activity;Ljava/lang/Object;)V]
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
-  + NameAndType [a (ILjava/lang/Object;)Landroid/os/Message;]
-  + NameAndType [a Landroid/app/AlertDialog;]
+  + NameAndType [TAG Ljava/lang/String;]
+  + NameAndType [alertDialog Landroid/app/AlertDialog;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [context Landroid/app/Activity;]
   + NameAndType [create ()Landroid/app/AlertDialog;]
   + NameAndType [currentThread ()Ljava/lang/Thread;]
-  + NameAndType [d Landroid/app/Activity;]
   + NameAndType [dismiss ()V]
   + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
   + NameAndType [getName ()Ljava/lang/String;]
+  + NameAndType [obtainMessage (ILjava/lang/Object;)Landroid/os/Message;]
   + NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   + NameAndType [show ()V]
   + NameAndType [toString ()Ljava/lang/String;]
@@ -55961,22 +55964,21 @@ Constant Pool (count = 92):
   + Utf8 [Landroid/app/AlertDialog;]
   + Utf8 [Ljava/lang/String;]
   + Utf8 [StackMapTable]
-  + Utf8 [a]
+  + Utf8 [TAG]
+  + Utf8 [alertDialog]
   + Utf8 [android/app/AlertDialog]
   + Utf8 [android/app/AlertDialog$Builder]
   + Utf8 [android/util/Log]
   + Utf8 [append]
-  + Utf8 [b]
-  + Utf8 [c]
   + Utf8 [cc]
-  + Utf8 [com/xdlv/async/a]
   + Utf8 [com/xdlv/async/d]
   + Utf8 [com/xdlv/async/task/m]
+  + Utf8 [context]
   + Utf8 [create]
   + Utf8 [currentThread]
-  + Utf8 [d]
   + Utf8 [dismiss]
   + Utf8 [e]
+  + Utf8 [filter]
   + Utf8 [getName]
   + Utf8 [invoke postExecute:]
   + Utf8 [invoke preExecute:]
@@ -55984,17 +55986,21 @@ Constant Pool (count = 92):
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [java/lang/Thread]
   + Utf8 [loading...]
+  + Utf8 [obtainMessage]
+  + Utf8 [postExecute]
+  + Utf8 [preExecute]
   + Utf8 [setTitle]
   + Utf8 [show]
+  + Utf8 [test]
   + Utf8 [toString]
 
 Fields (count = 2):
-  + Field:        a Landroid/app/AlertDialog;
+  + Field:        alertDialog Landroid/app/AlertDialog;
     Access flags: 0x0
-      = android.app.AlertDialog a
-  + Field:        b Ljava/lang/String;
+      = android.app.AlertDialog alertDialog
+  + Field:        TAG Ljava/lang/String;
     Access flags: 0x0
-      = java.lang.String b
+      = java.lang.String TAG
 
 Methods (count = 5):
   - Method:       <init>(Landroid/app/Activity;Ljava/lang/Object;)V
@@ -56005,135 +56011,135 @@ Methods (count = 5):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] aload_2 v2
-      [3] invokespecial #24
+      [3] invokespecial #23
         + Methodref [com/xdlv/async/task/m.<init> (Landroid/app/Activity;Ljava/lang/Object;)V]
       [6] aload_0 v0
       [7] aconst_null
       [8] putfield #14
-        + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
+        + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
       [11] aload_0 v0
       [12] ldc #1
         + String [cc]
-      [14] putfield #15
-        + Fieldref [com/xdlv/async/d.b Ljava/lang/String;]
+      [14] putfield #13
+        + Fieldref [com/xdlv/async/d.TAG Ljava/lang/String;]
       [17] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(IILjava/lang/String;)Landroid/os/Message;
+  + Method:       test(IILjava/lang/String;)Landroid/os/Message;
     Access flags: 0x1
-      = public android.os.Message a(int,int,java.lang.String)
+      = public android.os.Message test(int,int,java.lang.String)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 17, locals = 4, stack = 3):
       [0] aload_0 v0
-      [1] getfield #15
-        + Fieldref [com/xdlv/async/d.b Ljava/lang/String;]
+      [1] getfield #13
+        + Fieldref [com/xdlv/async/d.TAG Ljava/lang/String;]
       [4] ldc #4
         + String [invoke test]
-      [6] invokestatic #22
+      [6] invokestatic #21
         + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
       [9] pop
       [10] aload_0 v0
       [11] iload_2 v2
       [12] aload_3 v3
-      [13] invokevirtual #23
-        + Methodref [com/xdlv/async/d.a (ILjava/lang/Object;)Landroid/os/Message;]
+      [13] invokevirtual #22
+        + Methodref [com/xdlv/async/d.obtainMessage (ILjava/lang/Object;)Landroid/os/Message;]
       [16] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(I)V
+  + Method:       preExecute(I)V
     Access flags: 0x4
-      = protected void a(int)
+      = protected void preExecute(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 67, locals = 2, stack = 4):
       [0] aload_0 v0
-      [1] getfield #15
-        + Fieldref [com/xdlv/async/d.b Ljava/lang/String;]
-      [4] new #12
+      [1] getfield #13
+        + Fieldref [com/xdlv/async/d.TAG Ljava/lang/String;]
+      [4] new #11
         + Class [java/lang/StringBuilder]
       [7] dup
       [8] ldc #3
         + String [invoke preExecute:]
-      [10] invokespecial #25
+      [10] invokespecial #24
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [13] invokestatic #28
+      [13] invokestatic #27
         + Methodref [java/lang/Thread.currentThread ()Ljava/lang/Thread;]
-      [16] invokevirtual #29
+      [16] invokevirtual #28
         + Methodref [java/lang/Thread.getName ()Ljava/lang/String;]
-      [19] invokevirtual #26
+      [19] invokevirtual #25
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [22] invokevirtual #27
+      [22] invokevirtual #26
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [25] invokestatic #22
+      [25] invokestatic #21
         + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
       [28] pop
       [29] aload_0 v0
       [30] getfield #14
-        + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
+        + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
       [33] ifnonnull +26 (target=59)
       [36] aload_0 v0
       [37] new #7
         + Class [android/app/AlertDialog$Builder]
       [40] dup
       [41] aload_0 v0
-      [42] getfield #16
-        + Fieldref [com/xdlv/async/d.d Landroid/app/Activity;]
-      [45] invokespecial #19
+      [42] getfield #15
+        + Fieldref [com/xdlv/async/d.context Landroid/app/Activity;]
+      [45] invokespecial #18
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [48] ldc #5
         + String [loading...]
-      [50] invokevirtual #21
+      [50] invokevirtual #20
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
-      [53] invokevirtual #20
+      [53] invokevirtual #19
         + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
       [56] putfield #14
-        + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
+        + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
       [59] aload_0 v0
       [60] getfield #14
-        + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
-      [63] invokevirtual #18
+        + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
+      [63] invokevirtual #17
         + Methodref [android/app/AlertDialog.show ()V]
       [66] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
         - [59] Var: ..., Stack: (empty)
-  + Method:       b(I)V
+  + Method:       postExecute(I)V
     Access flags: 0x4
-      = protected void b(int)
+      = protected void postExecute(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 37, locals = 2, stack = 4):
       [0] aload_0 v0
-      [1] getfield #15
-        + Fieldref [com/xdlv/async/d.b Ljava/lang/String;]
-      [4] new #12
+      [1] getfield #13
+        + Fieldref [com/xdlv/async/d.TAG Ljava/lang/String;]
+      [4] new #11
         + Class [java/lang/StringBuilder]
       [7] dup
       [8] ldc #2
         + String [invoke postExecute:]
-      [10] invokespecial #25
+      [10] invokespecial #24
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [13] invokestatic #28
+      [13] invokestatic #27
         + Methodref [java/lang/Thread.currentThread ()Ljava/lang/Thread;]
-      [16] invokevirtual #29
+      [16] invokevirtual #28
         + Methodref [java/lang/Thread.getName ()Ljava/lang/String;]
-      [19] invokevirtual #26
+      [19] invokevirtual #25
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [22] invokevirtual #27
+      [22] invokevirtual #26
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [25] invokestatic #22
+      [25] invokestatic #21
         + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
       [28] pop
       [29] aload_0 v0
       [30] getfield #14
-        + Fieldref [com/xdlv/async/d.a Landroid/app/AlertDialog;]
-      [33] invokevirtual #17
+        + Fieldref [com/xdlv/async/d.alertDialog Landroid/app/AlertDialog;]
+      [33] invokevirtual #16
         + Methodref [android/app/AlertDialog.dismiss ()V]
       [36] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       c(I)Z
+  + Method:       filter(I)Z
     Access flags: 0x4
-      = protected boolean c(int)
+      = protected boolean filter(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 2, locals = 2, stack = 1):
       [0] iconst_1
@@ -58903,7 +58909,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [java/lang/reflect/InvocationHandler]
 
-Constant Pool (count = 161):
+Constant Pool (count = 162):
   + String [cancle]
   + String [cant load proxy:]
   + Class [[Ljava/lang/Object;]
@@ -58927,9 +58933,9 @@ Constant Pool (count = 161):
   + Class [java/lang/reflect/Proxy]
   + Fieldref [android/os/Message.obj Ljava/lang/Object;]
   + Fieldref [android/os/Message.what I]
-  + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
-  + Fieldref [com/xdlv/async/task/m.d Landroid/app/Activity;]
-  + Fieldref [com/xdlv/async/task/m.e Ljava/lang/Object;]
+  + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+  + Fieldref [com/xdlv/async/task/m.context Landroid/app/Activity;]
+  + Fieldref [com/xdlv/async/task/m.handler Ljava/lang/Object;]
   + Methodref [android/os/Message.obtain ()Landroid/os/Message;]
   + Methodref [android/util/SparseArray.<init> ()V]
   + Methodref [android/util/SparseArray.delete (I)V]
@@ -58942,7 +58948,6 @@ Constant Pool (count = 161):
   + Methodref [com/xdlv/async/task/n.a (I[Ljava/lang/Object;)Lcom/xdlv/async/task/k;]
   + Methodref [java/lang/Class.getClassLoader ()Ljava/lang/ClassLoader;]
   + Methodref [java/lang/Class.getConstructor ([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;]
-  + Methodref [java/lang/Class.getInterfaces ()[Ljava/lang/Class;]
   + Methodref [java/lang/Integer.intValue ()I]
   + Methodref [java/lang/Object.<init> ()V]
   + Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
@@ -58964,18 +58969,17 @@ Constant Pool (count = 161):
   + NameAndType [a (Z)Z]
   + NameAndType [append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + NameAndType [c ()Z]
-  + NameAndType [c Landroid/util/SparseArray;]
   + NameAndType [cancle (I)V]
-  + NameAndType [d Landroid/app/Activity;]
+  + NameAndType [codeMap Landroid/util/SparseArray;]
+  + NameAndType [context Landroid/app/Activity;]
   + NameAndType [delete (I)V]
-  + NameAndType [e Ljava/lang/Object;]
   + NameAndType [equals (Ljava/lang/Object;)Z]
   + NameAndType [get (I)Ljava/lang/Object;]
   + NameAndType [getClassLoader ()Ljava/lang/ClassLoader;]
   + NameAndType [getConstructor ([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;]
-  + NameAndType [getInterfaces ()[Ljava/lang/Class;]
   + NameAndType [getName ()Ljava/lang/String;]
   + NameAndType [getReturnType ()Ljava/lang/Class;]
+  + NameAndType [handler Ljava/lang/Object;]
   + NameAndType [intValue ()I]
   + NameAndType [invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   + NameAndType [newInstance ([Ljava/lang/Object;)Ljava/lang/Object;]
@@ -58992,7 +58996,6 @@ Constant Pool (count = 161):
   + Utf8 [()Ljava/lang/String;]
   + Utf8 [()V]
   + Utf8 [()Z]
-  + Utf8 [()[Ljava/lang/Class;]
   + Utf8 [(I)Ljava/lang/Object;]
   + Utf8 [(I)V]
   + Utf8 [(I)Z]
@@ -59001,7 +59004,7 @@ Constant Pool (count = 161):
   + Utf8 [(I[Ljava/lang/Object;)Lcom/xdlv/async/task/k;]
   + Utf8 [(Landroid/app/Activity;Ljava/lang/Object;)V]
   + Utf8 [(Lcom/xdlv/async/task/m;Ljava/lang/Object;I[Ljava/lang/Object;Ljava/lang/reflect/Method;)V]
-  + Utf8 [(Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;]
   + Utf8 [(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/Object;)Z]
@@ -59026,23 +59029,24 @@ Constant Pool (count = 161):
   + Utf8 [android/os/Message]
   + Utf8 [android/util/SparseArray]
   + Utf8 [append]
-  + Utf8 [b]
   + Utf8 [c]
   + Utf8 [cancle]
   + Utf8 [cant load proxy:]
+  + Utf8 [codeMap]
   + Utf8 [com/xdlv/async/task/k]
   + Utf8 [com/xdlv/async/task/m]
   + Utf8 [com/xdlv/async/task/n]
-  + Utf8 [d]
+  + Utf8 [context]
+  + Utf8 [createTaskProxy]
   + Utf8 [delete]
-  + Utf8 [e]
   + Utf8 [equals]
+  + Utf8 [filter]
   + Utf8 [get]
   + Utf8 [getClassLoader]
   + Utf8 [getConstructor]
-  + Utf8 [getInterfaces]
   + Utf8 [getName]
   + Utf8 [getReturnType]
+  + Utf8 [handler]
   + Utf8 [intValue]
   + Utf8 [invoke]
   + Utf8 [java/lang/Class]
@@ -59061,20 +59065,23 @@ Constant Pool (count = 161):
   + Utf8 [newProxyInstance]
   + Utf8 [obj]
   + Utf8 [obtain]
+  + Utf8 [obtainMessage]
+  + Utf8 [postExecute]
+  + Utf8 [preExecute]
   + Utf8 [put]
   + Utf8 [toString]
   + Utf8 [what]
 
 Fields (count = 3):
-  + Field:        c Landroid/util/SparseArray;
+  + Field:        codeMap Landroid/util/SparseArray;
     Access flags: 0x8
-      = static android.util.SparseArray c
-  + Field:        d Landroid/app/Activity;
+      = static android.util.SparseArray codeMap
+  + Field:        context Landroid/app/Activity;
     Access flags: 0x4
-      = protected android.app.Activity d
-  + Field:        e Ljava/lang/Object;
+      = protected android.app.Activity context
+  + Field:        handler Ljava/lang/Object;
     Access flags: 0x4
-      = protected java.lang.Object e
+      = protected java.lang.Object handler
 
 Methods (count = 9):
   - Method:       <clinit>()V
@@ -59088,7 +59095,7 @@ Methods (count = 9):
       [4] invokespecial #28
         + Methodref [android/util/SparseArray.<init> ()V]
       [7] putstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [10] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -59098,24 +59105,24 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 15, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #41
+      [1] invokespecial #40
         + Methodref [java/lang/Object.<init> ()V]
       [4] aload_0 v0
       [5] aload_1 v1
       [6] putfield #25
-        + Fieldref [com/xdlv/async/task/m.d Landroid/app/Activity;]
+        + Fieldref [com/xdlv/async/task/m.context Landroid/app/Activity;]
       [9] aload_0 v0
       [10] aload_2 v2
       [11] putfield #26
-        + Fieldref [com/xdlv/async/task/m.e Ljava/lang/Object;]
+        + Fieldref [com/xdlv/async/task/m.handler Ljava/lang/Object;]
       [14] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;
+  + Method:       createTaskProxy(Ljava/lang/Class;Ljava/lang/Class;Landroid/app/Activity;Ljava/lang/Object;)Ljava/lang/Object;
     Access flags: 0x9
-      = public static java.lang.Object a(java.lang.Class,android.app.Activity,java.lang.Object)
+      = public static java.lang.Object createTaskProxy(java.lang.Class,java.lang.Class,android.app.Activity,java.lang.Object)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 76, locals = 4, stack = 5):
+    + Code attribute instructions (code length = 85, locals = 5, stack = 5):
       [0] aload_0 v0
       [1] iconst_2
       [2] anewarray #10
@@ -59137,72 +59144,76 @@ Methods (count = 9):
         + Class [java/lang/Object]
       [22] dup
       [23] iconst_0
-      [24] aload_1 v1
+      [24] aload_2 v2
       [25] aastore
       [26] dup
       [27] iconst_1
-      [28] aload_2 v2
+      [28] aload_3 v3
       [29] aastore
-      [30] invokevirtual #48
+      [30] invokevirtual #47
         + Methodref [java/lang/reflect/Constructor.newInstance ([Ljava/lang/Object;)Ljava/lang/Object;]
       [33] checkcast #19
         + Class [java/lang/reflect/InvocationHandler]
-      [36] astore_3 v3
-      [37] aload_0 v0
-      [38] invokevirtual #37
+      [36] astore v4
+      [38] aload_0 v0
+      [39] invokevirtual #37
         + Methodref [java/lang/Class.getClassLoader ()Ljava/lang/ClassLoader;]
-      [41] aload_0 v0
-      [42] invokevirtual #39
-        + Methodref [java/lang/Class.getInterfaces ()[Ljava/lang/Class;]
-      [45] aload_3 v3
-      [46] invokestatic #52
+      [42] iconst_1
+      [43] anewarray #10
+        + Class [java/lang/Class]
+      [46] dup
+      [47] iconst_0
+      [48] aload_1 v1
+      [49] aastore
+      [50] aload v4
+      [52] invokestatic #51
         + Methodref [java/lang/reflect/Proxy.newProxyInstance (Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;]
-      [49] areturn
-      [50] astore_3 v3
-      [51] new #14
+      [55] areturn
+      [56] astore v4
+      [58] new #14
         + Class [java/lang/RuntimeException]
-      [54] dup
-      [55] new #16
+      [61] dup
+      [62] new #16
         + Class [java/lang/StringBuilder]
-      [58] dup
-      [59] ldc #2
+      [65] dup
+      [66] ldc #2
         + String [cant load proxy:]
-      [61] invokespecial #45
+      [68] invokespecial #44
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [64] aload_3 v3
-      [65] invokevirtual #46
+      [71] aload v4
+      [73] invokevirtual #45
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [68] invokevirtual #47
+      [76] invokevirtual #46
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [71] aload_3 v3
-      [72] invokespecial #43
+      [79] aload v4
+      [81] invokespecial #42
         + Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [75] athrow
+      [84] athrow
       Code attribute exceptions (count = 1):
-      - ExceptionInfo (0 -> 49: 50):
+      - ExceptionInfo (0 -> 55: 56):
       + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
-        - [50] Var: ..., Stack: [a:java/lang/Exception]
+        - [56] Var: ..., Stack: [a:java/lang/Exception]
   + Method:       invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     Access flags: 0x1
       = public java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 117, locals = 8, stack = 7):
+    + Code attribute instructions (code length = 150, locals = 8, stack = 7):
       [0] aload_3 v3
       [1] iconst_0
       [2] aaload
       [3] checkcast #12
         + Class [java/lang/Integer]
-      [6] invokevirtual #40
+      [6] invokevirtual #39
         + Methodref [java/lang/Integer.intValue ()I]
       [9] istore v4
       [11] aload_2 v2
-      [12] invokevirtual #49
+      [12] invokevirtual #48
         + Methodref [java/lang/reflect/Method.getName ()Ljava/lang/String;]
       [15] ldc #1
         + String [cancle]
-      [17] invokevirtual #44
+      [17] invokevirtual #43
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [20] ifeq +11 (target=31)
       [23] aload_0 v0
@@ -59216,82 +59227,109 @@ Methods (count = 9):
       [33] aaload
       [34] checkcast #12
         + Class [java/lang/Integer]
-      [37] invokevirtual #40
+      [37] invokevirtual #39
         + Methodref [java/lang/Integer.intValue ()I]
       [40] istore v5
-      [42] aload_2 v2
-      [43] invokevirtual #50
+      [42] getstatic #24
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+      [45] dup
+      [46] astore v6
+      [48] monitorenter
+      [49] getstatic #24
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+      [52] iload v5
+      [54] invokevirtual #30
+        + Methodref [android/util/SparseArray.get (I)Ljava/lang/Object;]
+      [57] ifnull +8 (target=65)
+      [60] aload v6
+      [62] monitorexit
+      [63] aconst_null
+      [64] areturn
+      [65] aload v6
+      [67] monitorexit
+      [68] goto +7 (target=75)
+      [71] aload v6
+      [73] monitorexit
+      [74] athrow
+      [75] aload_2 v2
+      [76] invokevirtual #49
         + Methodref [java/lang/reflect/Method.getReturnType ()Ljava/lang/Class;]
-      [46] ldc #5
+      [79] ldc #5
         + Class [android/os/Message]
-      [48] invokevirtual #42
+      [81] invokevirtual #41
         + Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
-      [51] ifeq +57 (target=108)
-      [54] new #9
+      [84] ifeq +57 (target=141)
+      [87] new #9
         + Class [com/xdlv/async/task/n]
-      [57] dup
-      [58] aload_0 v0
-      [59] aload_0 v0
-      [60] getfield #26
-        + Fieldref [com/xdlv/async/task/m.e Ljava/lang/Object;]
-      [63] iload v5
-      [65] iconst_0
-      [66] anewarray #13
+      [90] dup
+      [91] aload_0 v0
+      [92] aload_0 v0
+      [93] getfield #26
+        + Fieldref [com/xdlv/async/task/m.handler Ljava/lang/Object;]
+      [96] iload v5
+      [98] iconst_0
+      [99] anewarray #13
         + Class [java/lang/Object]
-      [69] aload_2 v2
-      [70] invokespecial #35
+      [102] aload_2 v2
+      [103] invokespecial #35
         + Methodref [com/xdlv/async/task/n.<init> (Lcom/xdlv/async/task/m;Ljava/lang/Object;I[Ljava/lang/Object;Ljava/lang/reflect/Method;)V]
-      [73] iload v4
-      [75] aload_3 v3
-      [76] invokevirtual #36
+      [106] iload v4
+      [108] aload_3 v3
+      [109] invokevirtual #36
         + Methodref [com/xdlv/async/task/n.a (I[Ljava/lang/Object;)Lcom/xdlv/async/task/k;]
-      [79] astore v6
-      [81] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
-      [84] dup
-      [85] astore v7
-      [87] monitorenter
-      [88] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
-      [91] iload v5
-      [93] aload v6
-      [95] invokevirtual #31
+      [112] astore v6
+      [114] getstatic #24
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+      [117] dup
+      [118] astore v7
+      [120] monitorenter
+      [121] getstatic #24
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+      [124] iload v5
+      [126] aload v6
+      [128] invokevirtual #31
         + Methodref [android/util/SparseArray.put (ILjava/lang/Object;)V]
-      [98] aload v7
-      [100] monitorexit
-      [101] goto +14 (target=115)
-      [104] aload v7
-      [106] monitorexit
-      [107] athrow
-      [108] aload_2 v2
-      [109] aload_0 v0
-      [110] aload_3 v3
-      [111] invokevirtual #51
+      [131] aload v7
+      [133] monitorexit
+      [134] goto +14 (target=148)
+      [137] aload v7
+      [139] monitorexit
+      [140] athrow
+      [141] aload_2 v2
+      [142] aload_0 v0
+      [143] aload_3 v3
+      [144] invokevirtual #50
         + Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
-      [114] areturn
-      [115] aconst_null
-      [116] areturn
-      Code attribute exceptions (count = 2):
-      - ExceptionInfo (88 -> 101: 104):
-      - ExceptionInfo (104 -> 107: 104):
+      [147] areturn
+      [148] aconst_null
+      [149] areturn
+      Code attribute exceptions (count = 5):
+      - ExceptionInfo (49 -> 63: 71):
+      - ExceptionInfo (65 -> 68: 71):
+      - ExceptionInfo (71 -> 74: 71):
+      - ExceptionInfo (121 -> 134: 137):
+      - ExceptionInfo (137 -> 140: 137):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
+      + Stack map table attribute (count = 7):
         - [31] Var: ...[i], Stack: (empty)
-        - [104] Var: [a:com/xdlv/async/task/m][a:java/lang/Object][a:java/lang/reflect/Method][a:[Ljava/lang/Object;][i][i][a:com/xdlv/async/task/k][a:android/util/SparseArray], Stack: [a:java/lang/Throwable]
-        - [108] Var: -2, Stack: (empty)
-        - [115] Var: ..., Stack: (empty)
+        - [65] Var: ...[i][a:android/util/SparseArray], Stack: (empty)
+        - [71] Var: ..., Stack: [a:java/lang/Throwable]
+        - [75] Var: -1, Stack: (empty)
+        - [137] Var: [a:com/xdlv/async/task/m][a:java/lang/Object][a:java/lang/reflect/Method][a:[Ljava/lang/Object;][i][i][a:com/xdlv/async/task/k][a:android/util/SparseArray], Stack: [a:java/lang/Throwable]
+        - [141] Var: -2, Stack: (empty)
+        - [148] Var: ..., Stack: (empty)
   + Method:       cancle(I)V
     Access flags: 0x1
       = public void cancle(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 67, locals = 5, stack = 2):
       [0] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [3] dup
       [4] astore_2 v2
       [5] monitorenter
       [6] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [9] iload_1 v1
       [10] invokevirtual #30
         + Methodref [android/util/SparseArray.get (I)Ljava/lang/Object;]
@@ -59310,12 +59348,12 @@ Methods (count = 9):
         + Methodref [com/xdlv/async/task/k.a (Z)Z]
       [33] pop
       [34] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [37] dup
       [38] astore v4
       [40] monitorenter
       [41] getstatic #24
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [44] iload_1 v1
       [45] invokevirtual #29
         + Methodref [android/util/SparseArray.delete (I)V]
@@ -59344,9 +59382,9 @@ Methods (count = 9):
         - [58] Var: -2, Stack: (empty)
         - [63] Var: ..., Stack: [a:java/lang/Throwable]
         - [66] Var: -1, Stack: (empty)
-  + Method:       a(ILjava/lang/Object;)Landroid/os/Message;
+  + Method:       obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
     Access flags: 0x4
-      = protected android.os.Message a(int,java.lang.Object)
+      = protected android.os.Message obtainMessage(int,java.lang.Object)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 16, locals = 4, stack = 2):
       [0] invokestatic #27
@@ -59364,26 +59402,26 @@ Methods (count = 9):
       [15] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       c(I)Z
+  + Method:       filter(I)Z
     Access flags: 0x4
-      = protected boolean c(int)
+      = protected boolean filter(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 2, locals = 2, stack = 1):
       [0] iconst_1
       [1] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(I)V
+  + Method:       preExecute(I)V
     Access flags: 0x4
-      = protected void a(int)
+      = protected void preExecute(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 1, locals = 2, stack = 0):
       [0] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       b(I)V
+  + Method:       postExecute(I)V
     Access flags: 0x4
-      = protected void b(int)
+      = protected void postExecute(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 1, locals = 2, stack = 0):
       [0] return
@@ -59402,7 +59440,8 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 73):
+Constant Pool (count = 112):
+  + String [can not find target:]
   + Class [android/app/Activity]
   + Class [android/os/Message]
   + Class [android/util/SparseArray]
@@ -59411,10 +59450,14 @@ Constant Pool (count = 73):
   + Class [com/xdlv/async/task/n]
   + Class [com/xdlv/async/task/o]
   + Class [com/xdlv/async/task/p]
+  + Class [java/lang/Class]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Object]
+  + Class [java/lang/StringBuilder]
   + Class [java/lang/Throwable]
   + Class [java/lang/reflect/Method]
-  + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
-  + Fieldref [com/xdlv/async/task/m.d Landroid/app/Activity;]
+  + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
+  + Fieldref [com/xdlv/async/task/m.context Landroid/app/Activity;]
   + Fieldref [com/xdlv/async/task/n.d I]
   + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
   + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
@@ -59422,23 +59465,41 @@ Constant Pool (count = 73):
   + Methodref [android/util/SparseArray.delete (I)V]
   + Methodref [com/xdlv/async/task/k.<init> (Ljava/lang/Object;I[Ljava/lang/Object;)V]
   + Methodref [com/xdlv/async/task/k.a (Landroid/os/Message;)V]
-  + Methodref [com/xdlv/async/task/m.c (I)Z]
+  + Methodref [com/xdlv/async/task/m.filter (I)Z]
   + Methodref [com/xdlv/async/task/o.<init> (Lcom/xdlv/async/task/n;)V]
   + Methodref [com/xdlv/async/task/p.<init> (Lcom/xdlv/async/task/n;)V]
+  + Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  + Methodref [java/lang/Exception.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+  + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/reflect/Method.getName ()Ljava/lang/String;]
+  + Methodref [java/lang/reflect/Method.getParameterTypes ()[Ljava/lang/Class;]
   + Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   + NameAndType [<init> (Lcom/xdlv/async/task/n;)V]
   + NameAndType [<init> (Ljava/lang/Object;I[Ljava/lang/Object;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [a (Landroid/os/Message;)V]
-  + NameAndType [c (I)Z]
-  + NameAndType [c Landroid/util/SparseArray;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [codeMap Landroid/util/SparseArray;]
+  + NameAndType [context Landroid/app/Activity;]
   + NameAndType [d I]
-  + NameAndType [d Landroid/app/Activity;]
   + NameAndType [delete (I)V]
+  + NameAndType [filter (I)Z]
   + NameAndType [g Lcom/xdlv/async/task/m;]
+  + NameAndType [getClass ()Ljava/lang/Class;]
+  + NameAndType [getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  + NameAndType [getName ()Ljava/lang/String;]
+  + NameAndType [getParameterTypes ()[Ljava/lang/Class;]
   + NameAndType [h Ljava/lang/reflect/Method;]
   + NameAndType [invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   + NameAndType [runOnUiThread (Ljava/lang/Runnable;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 [()Ljava/lang/Class;]
+  + Utf8 [()Ljava/lang/String;]
   + Utf8 [()V]
+  + Utf8 [()[Ljava/lang/Class;]
   + Utf8 [(I)V]
   + Utf8 [(I)Z]
   + Utf8 [(Landroid/os/Message;)V]
@@ -59448,6 +59509,9 @@ Constant Pool (count = 73):
   + Utf8 [(Ljava/lang/Object;I[Ljava/lang/Object;)V]
   + Utf8 [(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   + Utf8 [(Ljava/lang/Runnable;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
   + Utf8 [([Ljava/lang/Object;)Landroid/os/Message;]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -59461,20 +59525,33 @@ Constant Pool (count = 73):
   + Utf8 [android/app/Activity]
   + Utf8 [android/os/Message]
   + Utf8 [android/util/SparseArray]
-  + Utf8 [c]
+  + Utf8 [append]
+  + Utf8 [can not find target:]
+  + Utf8 [codeMap]
   + Utf8 [com/xdlv/async/task/k]
   + Utf8 [com/xdlv/async/task/m]
   + Utf8 [com/xdlv/async/task/n]
   + Utf8 [com/xdlv/async/task/o]
   + Utf8 [com/xdlv/async/task/p]
+  + Utf8 [context]
   + Utf8 [d]
   + Utf8 [delete]
+  + Utf8 [filter]
   + Utf8 [g]
+  + Utf8 [getClass]
+  + Utf8 [getMethod]
+  + Utf8 [getName]
+  + Utf8 [getParameterTypes]
   + Utf8 [h]
   + Utf8 [invoke]
+  + Utf8 [java/lang/Class]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/StringBuilder]
   + Utf8 [java/lang/Throwable]
   + Utf8 [java/lang/reflect/Method]
   + Utf8 [runOnUiThread]
+  + Utf8 [toString]
 
 Fields (count = 2):
   + Field:        g Lcom/xdlv/async/task/m;
@@ -59492,17 +59569,17 @@ Methods (count = 5):
     + Code attribute instructions (code length = 20, locals = 6, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #14
+      [2] putfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
       [5] aload_0 v0
       [6] aload v5
-      [8] putfield #15
+      [8] putfield #20
         + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
       [11] aload_0 v0
       [12] aload_2 v2
       [13] iload_3 v3
       [14] aload v4
-      [16] invokespecial #18
+      [16] invokespecial #23
         + Methodref [com/xdlv/async/task/k.<init> (Ljava/lang/Object;I[Ljava/lang/Object;)V]
       [19] return
       Code attribute exceptions (count = 0):
@@ -59513,26 +59590,26 @@ Methods (count = 5):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 33, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] getfield #14
+      [1] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
       [4] aload_0 v0
-      [5] getfield #13
+      [5] getfield #18
         + Fieldref [com/xdlv/async/task/n.d I]
-      [8] invokevirtual #20
-        + Methodref [com/xdlv/async/task/m.c (I)Z]
+      [8] invokevirtual #25
+        + Methodref [com/xdlv/async/task/m.filter (I)Z]
       [11] ifeq +21 (target=32)
       [14] aload_0 v0
-      [15] getfield #14
+      [15] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
-      [18] getfield #12
-        + Fieldref [com/xdlv/async/task/m.d Landroid/app/Activity;]
-      [21] new #7
+      [18] getfield #17
+        + Fieldref [com/xdlv/async/task/m.context Landroid/app/Activity;]
+      [21] new #8
         + Class [com/xdlv/async/task/o]
       [24] dup
       [25] aload_0 v0
-      [26] invokespecial #21
+      [26] invokespecial #26
         + Methodref [com/xdlv/async/task/o.<init> (Lcom/xdlv/async/task/n;)V]
-      [29] invokevirtual #16
+      [29] invokevirtual #21
         + Methodref [android/app/Activity.runOnUiThread (Ljava/lang/Runnable;)V]
       [32] return
       Code attribute exceptions (count = 0):
@@ -59543,21 +59620,63 @@ Methods (count = 5):
     Access flags: 0x84
       = protected varargs android.os.Message d(java.lang.Object[])
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 16, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 72, locals = 3, stack = 5):
       [0] aload_0 v0
-      [1] getfield #15
-        + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
-      [4] aload_0 v0
-      [5] getfield #14
+      [1] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
-      [8] aload_1 v1
-      [9] invokevirtual #23
+      [4] invokevirtual #30
+        + Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+      [7] aload_0 v0
+      [8] getfield #20
+        + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
+      [11] invokevirtual #34
+        + Methodref [java/lang/reflect/Method.getName ()Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] getfield #20
+        + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
+      [18] invokevirtual #35
+        + Methodref [java/lang/reflect/Method.getParameterTypes ()[Ljava/lang/Class;]
+      [21] invokevirtual #28
+        + Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [24] astore_2 v2
+      [25] aload_2 v2
+      [26] ifnonnull +33 (target=59)
+      [29] new #11
+        + Class [java/lang/Exception]
+      [32] dup
+      [33] new #13
+        + Class [java/lang/StringBuilder]
+      [36] dup
+      [37] ldc #1
+        + String [can not find target:]
+      [39] invokespecial #31
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [42] aload_0 v0
+      [43] getfield #20
+        + Fieldref [com/xdlv/async/task/n.h Ljava/lang/reflect/Method;]
+      [46] invokevirtual #34
+        + Methodref [java/lang/reflect/Method.getName ()Ljava/lang/String;]
+      [49] invokevirtual #32
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [52] invokevirtual #33
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [55] invokespecial #29
+        + Methodref [java/lang/Exception.<init> (Ljava/lang/String;)V]
+      [58] athrow
+      [59] aload_2 v2
+      [60] aload_0 v0
+      [61] getfield #19
+        + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
+      [64] aload_1 v1
+      [65] invokevirtual #36
         + Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
-      [12] checkcast #2
+      [68] checkcast #3
         + Class [android/os/Message]
-      [15] areturn
+      [71] areturn
       Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [59] Var: ...[a:java/lang/reflect/Method], Stack: (empty)
   + Method:       a(Landroid/os/Message;)V
     Access flags: 0x4
       = protected void a(android.os.Message)
@@ -59565,19 +59684,19 @@ Methods (count = 5):
     + Code attribute instructions (code length = 62, locals = 3, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #19
+      [2] invokespecial #24
         + Methodref [com/xdlv/async/task/k.a (Landroid/os/Message;)V]
-      [5] getstatic #11
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+      [5] getstatic #16
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [8] dup
       [9] astore_2 v2
       [10] monitorenter
-      [11] getstatic #11
-        + Fieldref [com/xdlv/async/task/m.c Landroid/util/SparseArray;]
+      [11] getstatic #16
+        + Fieldref [com/xdlv/async/task/m.codeMap Landroid/util/SparseArray;]
       [14] aload_0 v0
-      [15] getfield #13
+      [15] getfield #18
         + Fieldref [com/xdlv/async/task/n.d I]
-      [18] invokevirtual #17
+      [18] invokevirtual #22
         + Methodref [android/util/SparseArray.delete (I)V]
       [21] aload_2 v2
       [22] monitorexit
@@ -59586,26 +59705,26 @@ Methods (count = 5):
       [27] monitorexit
       [28] athrow
       [29] aload_0 v0
-      [30] getfield #14
+      [30] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
       [33] aload_0 v0
-      [34] getfield #13
+      [34] getfield #18
         + Fieldref [com/xdlv/async/task/n.d I]
-      [37] invokevirtual #20
-        + Methodref [com/xdlv/async/task/m.c (I)Z]
+      [37] invokevirtual #25
+        + Methodref [com/xdlv/async/task/m.filter (I)Z]
       [40] ifeq +21 (target=61)
       [43] aload_0 v0
-      [44] getfield #14
+      [44] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
-      [47] getfield #12
-        + Fieldref [com/xdlv/async/task/m.d Landroid/app/Activity;]
-      [50] new #8
+      [47] getfield #17
+        + Fieldref [com/xdlv/async/task/m.context Landroid/app/Activity;]
+      [50] new #9
         + Class [com/xdlv/async/task/p]
       [53] dup
       [54] aload_0 v0
-      [55] invokespecial #22
+      [55] invokespecial #27
         + Methodref [com/xdlv/async/task/p.<init> (Lcom/xdlv/async/task/n;)V]
-      [58] invokevirtual #16
+      [58] invokevirtual #21
         + Methodref [android/app/Activity.runOnUiThread (Ljava/lang/Runnable;)V]
       [61] return
       Code attribute exceptions (count = 2):
@@ -59622,7 +59741,7 @@ Methods (count = 5):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #14
+      [1] getfield #19
         + Fieldref [com/xdlv/async/task/n.g Lcom/xdlv/async/task/m;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -59641,7 +59760,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [java/lang/Runnable]
 
-Constant Pool (count = 32):
+Constant Pool (count = 33):
   + Class [com/xdlv/async/task/m]
   + Class [com/xdlv/async/task/n]
   + Class [com/xdlv/async/task/o]
@@ -59649,14 +59768,14 @@ Constant Pool (count = 32):
   + Class [java/lang/Runnable]
   + Fieldref [com/xdlv/async/task/n.d I]
   + Fieldref [com/xdlv/async/task/o.a Lcom/xdlv/async/task/n;]
-  + Methodref [com/xdlv/async/task/m.a (I)V]
+  + Methodref [com/xdlv/async/task/m.preExecute (I)V]
   + Methodref [com/xdlv/async/task/n.a (Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [a (I)V]
   + NameAndType [a (Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
   + NameAndType [a Lcom/xdlv/async/task/n;]
   + NameAndType [d I]
+  + NameAndType [preExecute (I)V]
   + Utf8 [()V]
   + Utf8 [(I)V]
   + Utf8 [(Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
@@ -59672,6 +59791,7 @@ Constant Pool (count = 32):
   + Utf8 [d]
   + Utf8 [java/lang/Object]
   + Utf8 [java/lang/Runnable]
+  + Utf8 [preExecute]
   + Utf8 [run]
 
 Fields (count = 1):
@@ -59711,7 +59831,7 @@ Methods (count = 2):
       [11] getfield #6
         + Fieldref [com/xdlv/async/task/n.d I]
       [14] invokevirtual #8
-        + Methodref [com/xdlv/async/task/m.a (I)V]
+        + Methodref [com/xdlv/async/task/m.preExecute (I)V]
       [17] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -59737,14 +59857,14 @@ Constant Pool (count = 33):
   + Class [java/lang/Runnable]
   + Fieldref [com/xdlv/async/task/n.d I]
   + Fieldref [com/xdlv/async/task/p.a Lcom/xdlv/async/task/n;]
-  + Methodref [com/xdlv/async/task/m.b (I)V]
+  + Methodref [com/xdlv/async/task/m.postExecute (I)V]
   + Methodref [com/xdlv/async/task/n.a (Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [a (Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
   + NameAndType [a Lcom/xdlv/async/task/n;]
-  + NameAndType [b (I)V]
   + NameAndType [d I]
+  + NameAndType [postExecute (I)V]
   + Utf8 [()V]
   + Utf8 [(I)V]
   + Utf8 [(Lcom/xdlv/async/task/n;)Lcom/xdlv/async/task/m;]
@@ -59754,13 +59874,13 @@ Constant Pool (count = 33):
   + Utf8 [I]
   + Utf8 [Lcom/xdlv/async/task/n;]
   + Utf8 [a]
-  + Utf8 [b]
   + Utf8 [com/xdlv/async/task/m]
   + Utf8 [com/xdlv/async/task/n]
   + Utf8 [com/xdlv/async/task/p]
   + Utf8 [d]
   + Utf8 [java/lang/Object]
   + Utf8 [java/lang/Runnable]
+  + Utf8 [postExecute]
   + Utf8 [run]
 
 Fields (count = 1):
@@ -59800,10 +59920,53 @@ Methods (count = 2):
       [11] getfield #6
         + Fieldref [com/xdlv/async/task/n.d I]
       [14] invokevirtual #8
-        + Methodref [com/xdlv/async/task/m.b (I)V]
+        + Methodref [com/xdlv/async/task/m.postExecute (I)V]
       [17] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
 Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/xdlv/async/task/Tar
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x2601
+    = @ public @interface com.xdlv.async.task.Tar extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/annotation/Annotation]
+
+Constant Pool (count = 16):
+  + Class [com/xdlv/async/task/Tar]
+  + Class [java/lang/Object]
+  + Class [java/lang/annotation/Annotation]
+  + Utf8 [()[Ljava/lang/String;]
+  + Utf8 [Ljava/lang/annotation/ElementType;]
+  + Utf8 [Ljava/lang/annotation/Retention;]
+  + Utf8 [Ljava/lang/annotation/RetentionPolicy;]
+  + Utf8 [Ljava/lang/annotation/Target;]
+  + Utf8 [METHOD]
+  + Utf8 [RUNTIME]
+  + Utf8 [RuntimeVisibleAnnotations]
+  + Utf8 [com/xdlv/async/task/Tar]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/annotation/Annotation]
+  + Utf8 [value]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  + Method:       value()[Ljava/lang/String;
+    Access flags: 0x401
+      = public abstract java.lang.String[] value()
+
+Class file attributes (count = 1):
+  + Runtime visible annotations attribute:
+    - Annotation [Ljava/lang/annotation/Target;]:
+      - Array element value [value]:
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, METHOD]
+    - Annotation [Ljava/lang/annotation/Retention;]:
+      - Enum constant element value [value, Ljava/lang/annotation/RetentionPolicy;, RUNTIME]
 
