@@ -26,7 +26,7 @@ public class CommonProcess {
 						for (i = 0; i < size; i++) {
 							task = codeMap.valueAt(i);
 							if (task.executable()) {
-								task.execute(task.para);
+								task.execute(0,task.para);
 								task.executed(true);
 							}
 						}

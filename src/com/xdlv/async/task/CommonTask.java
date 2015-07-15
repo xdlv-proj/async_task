@@ -12,11 +12,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.Message;
-import android.util.Log;
+
+import com.xdlv.async.log.FileLogUtils;
 
 abstract class CommonTask<Params> extends AsyncTask<Params, Object, Message> {
 
 	static ScheduledExecutorService exec = Executors.newScheduledThreadPool(5);
+	static FileLogUtils logger = FileLogUtils.getInstance("CommonTask");
 	
     static final String TAG = "TASK_ERROR";
     private Object handler;
@@ -167,14 +169,11 @@ abstract class CommonTask<Params> extends AsyncTask<Params, Object, Message> {
     }
 
     protected void e(String msg, Throwable e) {
-        Log.e(TAG, msg, e);
+        logger.e(msg, e);
     }
 
-    protected void w(String msg, Throwable e) {
-        Log.w(TAG, msg, e);
-    }
     protected void i(String msg, Throwable e) {
-        Log.i(TAG, msg, e);
+    	logger.i(msg, e);
     }
 
     public static interface TaskListener{

@@ -66,10 +66,10 @@ public class ProxyCommonTask implements InvocationHandler {
 					return (Message) implMethod.invoke(ProxyCommonTask.this, params);
 				}
 				protected void onPostExecute(Message result) {
-					super.onPostExecute(result);
 					synchronized (codeMap) {
 						codeMap.delete(code);
 					}
+					super.onPostExecute(result);
 					if (filter(code)){
 						context.runOnUiThread(new Runnable() {
 							@Override

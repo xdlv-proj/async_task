@@ -16,21 +16,16 @@
 
 package com.xdlv.async.task;
 
-import java.util.ArrayDeque;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
 import java.util.concurrent.FutureTask;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import android.os.Handler;
 import android.os.Message;
@@ -181,7 +176,7 @@ import android.os.Message;
 public abstract class AsyncTask<Params, Progress, Result> {
     private static final String LOG_TAG = "AsyncTask";
 
-    private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
+    /*private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
     private static final int CORE_POOL_SIZE = CPU_COUNT + 1;
     private static final int MAXIMUM_POOL_SIZE = CPU_COUNT * 2 + 1;
     private static final int KEEP_ALIVE = 1;
@@ -197,25 +192,25 @@ public abstract class AsyncTask<Params, Progress, Result> {
     private static final BlockingQueue<Runnable> sPoolWorkQueue =
             new LinkedBlockingQueue<Runnable>(128);
 
-    /**
+    *//**
      * An {@link Executor} that can be used to execute tasks in parallel.
-     */
+     *//*
     public static final Executor THREAD_POOL_EXECUTOR
             = new ThreadPoolExecutor(CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE,
-                    TimeUnit.SECONDS, sPoolWorkQueue, sThreadFactory);
+                    TimeUnit.SECONDS, sPoolWorkQueue, sThreadFactory);*/
 
     /**
      * An {@link Executor} that executes tasks one at a time in serial
      * order.  This serialization is global to a particular process.
      */
-    public static final Executor SERIAL_EXECUTOR = new SerialExecutor();
+    //public static final Executor SERIAL_EXECUTOR = new SerialExecutor();
 
     private static final int MESSAGE_POST_RESULT = 0x1;
     private static final int MESSAGE_POST_PROGRESS = 0x2;
 
     private static final InternalHandler sHandler = new InternalHandler();
 
-    private static volatile Executor sDefaultExecutor = SERIAL_EXECUTOR;
+    //private static volatile Executor sDefaultExecutor = SERIAL_EXECUTOR;
     private final WorkerRunnable<Params, Result> mWorker;
     private final FutureTask<Result> mFuture;
 
@@ -224,7 +219,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
     private final AtomicBoolean mCancelled = new AtomicBoolean();
     private final AtomicBoolean mTaskInvoked = new AtomicBoolean();
 
-    private static class SerialExecutor implements Executor {
+    /*private static class SerialExecutor implements Executor {
         final ArrayDeque<Runnable> mTasks = new ArrayDeque<Runnable>();
         Runnable mActive;
 
@@ -248,7 +243,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
                 THREAD_POOL_EXECUTOR.execute(mActive);
             }
         }
-    }
+    }*/
 
     /**
      * Indicates the current status of the task. Each status will be set only once
@@ -275,9 +270,9 @@ public abstract class AsyncTask<Params, Progress, Result> {
     }
 
     /** @hide */
-    public static void setDefaultExecutor(Executor exec) {
+    /*public static void setDefaultExecutor(Executor exec) {
         sDefaultExecutor = exec;
-    }
+    }*/
 
     /**
      * Creates a new asynchronous task. This constructor must be invoked on the UI thread.
@@ -532,9 +527,9 @@ public abstract class AsyncTask<Params, Progress, Result> {
      * @see #executeOnExecutor(java.util.concurrent.Executor, Object[])
      * @see #execute(Runnable)
      */
-    public final AsyncTask<Params, Progress, Result> execute(Params... params) {
+    /*public final AsyncTask<Params, Progress, Result> execute(Params... params) {
         return executeOnExecutor(sDefaultExecutor, params);
-    }
+    }*/
 
     /**
      * Executes the task with the specified parameters. The task returns
@@ -629,9 +624,9 @@ public abstract class AsyncTask<Params, Progress, Result> {
      * @see #execute(Object[])
      * @see #executeOnExecutor(java.util.concurrent.Executor, Object[])
      */
-    public static void execute(Runnable runnable) {
+    /*public static void execute(Runnable runnable) {
         sDefaultExecutor.execute(runnable);
-    }
+    }*/
 
     /**
      * This method can be invoked from {@link #doInBackground} to
